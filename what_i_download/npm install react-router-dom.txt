@@ -1,0 +1,122 @@
+Ye **React Router** ke liye hai. Simple language mein:
+
+Tumhare project mein abhi `App.jsx` ke andar **Home Page directly likha hua hai**. Lekin tumhare website mein multiple pages hain:
+
+```text
+/             → Home
+/categories   → Categories
+/reels        → Reels
+```
+
+React ko ye batana padega ki **URL ke according kaunsa component/page dikhana hai**.
+
+### Example 👇
+
+Agar user Header mein:
+
+**Home** click kare:
+
+```text
+http://localhost:5173/
+```
+
+→ Home page dikhega.
+
+Agar **Categories** click kare:
+
+```text
+http://localhost:5173/categories
+```
+
+→ `Category.jsx` dikhega.
+
+Agar **Reels** click kare:
+
+```text
+http://localhost:5173/reels
+```
+
+→ `Reels.jsx` dikhega.
+
+---
+
+### `react-router-dom` kya karta hai?
+
+Ye basically tumhari React website ka **traffic controller 🚦** hai.
+
+```text
+URL
+ │
+ ├── /            → Home.jsx
+ │
+ ├── /categories  → Category.jsx
+ │
+ └── /reels       → Reels.jsx
+```
+
+Without Router, React ko `/categories` dekhkar automatically pata nahi chalega ki `Category.jsx` open karna hai.
+
+### Isliye command:
+
+```bash
+npm install react-router-dom
+```
+
+ye package tumhare project mein **routing ki capability add karta hai**.
+
+---
+
+### Tumhare case mein ye important kyun hai?
+
+Kyuki tum **old EJS website ko React + Node/Express + MongoDB** mein convert kar rahi ho.
+
+Old EJS mein Express routes kuch aise ho sakte the:
+
+```text
+/categories
+/category/college
+/outfit/123
+/reels
+```
+
+React mein frontend side par in pages ko manage karne ke liye React Router useful hai.
+
+**Abhi command run karna hai:**
+
+```bash
+npm install react-router-dom
+```
+
+Bas. **Uske baad rukna.** 😄
+
+Command successful hone ke baad mujhe bata dena, phir main tumhe `App.jsx` mein routing **ek-ek step se** karwaunga, aur tumhara existing Home code delete nahi hoga.
+
+
+
+
+
+
+
+
+
+
+
+Abhi bas itna hi karo. 🛑
+
+<BrowserRouter> ya <Routes> abhi mat likhna.
+
+Pehle ye samjho ki humne kya import kiya:
+
+BrowserRouter → URL routing ko enable karta hai
+Routes → routes ka container
+Route → kis URL par kaunsa component dikhana hai
+
+Example:
+
+/            → Home
+/categories  → Category
+/reels       → Reels
+
+Lekin abhi hum sirf imports kar rahe hain.
+
+Ye line add karke mujhe screenshot bhejo. Phir next step mein hum actual routing likhenge. 🚀
